@@ -69,7 +69,7 @@ int main()
   double      fdn=1.1;    
 
   std::cout<<"parallel count:"<<std::endl;
-  std::cout<<"n;close;far"<<std::endl;
+  std::cout<<"n;near;far"<<std::endl;
     
   for(std::size_t n=n0;n<=n1;n+=dn,dn=(unsigned int)(dn*fdn)){
     std::mt19937                    gen;

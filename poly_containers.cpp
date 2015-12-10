@@ -151,7 +151,7 @@ public:
   F for_each(F f)
   {
     for(const auto& p:chunks)p.second->for_each(f);
-    return std::move(f);
+    return f;
   }
 
   template<typename F>
@@ -159,7 +159,7 @@ public:
   {
     for(const auto& p:chunks)
       const_cast<const segment&>(*p.second).for_each(f);
-    return std::move(f);
+    return f;
   }
 
 private:
